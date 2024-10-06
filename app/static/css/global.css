@@ -1,0 +1,17 @@
+:root{
+   --color-orange:orange;
+}
+html, body{
+   height: 100%;
+}
+body {
+   display: flex;
+   flex-direction: column;
+}
+.container{
+   flex: 1;
+}
+
+.w-fit-content{
+   width: fit-content;
+}

@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+{% block title %}
+   <title>about</title>
+{% endblock %}
+
+{% block content %}
+   {% for about in abouts %}
+      <div class="about-section text-center bg-primary rounded-circle">
+         <h1>Hakkımızda</h1>
+         <p>{{about.bulletpoint_1}}</p>
+      </div>
+      <div class="content text-center mb-5 pb-5">
+         <h2>Hikayemiz...</h2>
+         <p>{{about.bulletpoint_2}}</p>
+
+         <h2>Hedefimiz...</h2>
+         <p>{{about.bulletpoint_3}}</p>
+      </div>
+   {% endfor %}
+{% endblock content %}

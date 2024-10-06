@@ -1,0 +1,19 @@
+{% load static %}
+
+<div class="accordion-item border-0 mx-auto position-relative w-fit-content my-5">
+      <button class="collapsed border-0 bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{categorie.id}}" aria-expanded="false" aria-controls="flush-collapseOne">
+        <h2 class="accordion-header position-absolute top-0 start-0 p-2 custom-radius translate-middle" id="flush-headingOne">{{categorie.name}}</h2>
+        {% if categorie.img %}
+          <img class="img-responsive" src="{{categorie.img.url}}" alt="kahvalti1.jpg">
+        {% endif %}
+
+        <!-- <img class="img-responsive" src="{% static 'images/categorie/kahvalti1.jpg' %}" alt="kahvalti1.jpg"> -->
+      </button>
+    <div id="flush-collapse{{categorie.id}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        {% for menu in categorie.menus.all %}
+          {% include 'components/_menu.html' with menu=menu %}
+        {% endfor %}
+      </div>
+    </div>
+</div>

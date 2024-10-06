@@ -1,0 +1,8 @@
+.price::after{
+   content: ' TL';
+}
+
+.custom-radius{
+   border-radius: 10px 100px / 120px;
+   background-color: #A1D6B2;
+}

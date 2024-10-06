@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %} {% endblock %}
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="{% static 'css/cdn/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="{% static 'css/global.css' %}" />
+
+    <link
+      rel="shortcut icon"
+      href="{% static 'icons/balloon-heart-fill.svg' %}"
+      type="image/x-icon"
+    />
+
+    <!-- Own CSS -->
+    {% block css %} {% endblock %}
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <!-- Navbar -->
+        {% include 'partials/_navbar.html' %}
+      </div>
+      <div class="row">
+        <!-- Main Content -->
+        {% block content %} {% endblock %}
+      </div>
+    </div>
+
+    <!-- Footer -->
+     <footer>
+       {% include 'partials/_footer.html' %}
+     </footer>
+
+    <!-- Global Scripts -->
+    <script src="{% static 'js/cdn/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Own Scripts -->
+    {% block scripts %} {% endblock %}
+
+  </body>
+</html>

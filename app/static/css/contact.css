@@ -1,0 +1,26 @@
+.contact-container{
+   background-image: url("../images/contact/manzara.jpg");
+   background-size: cover;
+   min-height: 75vh;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.b-contact-icons{
+   backdrop-filter: blur(1px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+.custom-a-hover{
+   color: orange;
+   font-weight: bold;
+   text-decoration: none;
+   border-bottom: 2px solid transparent;
+   transition: color 0.3s ease, border-bottom-color 0.3s ease;
+   &:hover{
+      color: #ff4081; /* Renk hover sırasında değişecek */
+      border-bottom-color: #ff4081; /* Alt çizgi hover durumunda belirir */
+   }
+}

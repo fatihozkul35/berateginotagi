@@ -1,0 +1,38 @@
+{% load static %}
+
+<div class="card mb-3 card mb-3 mx-auto p-3" style="max-width: 540px;">
+  <div class="row">
+    <div class="row">
+      <div class="col-8 text-start">
+        <h5>{{menu.title}}</h5>
+      </div>
+      <div class="col-4 text-end">
+        <strong class="price">{{menu.price}}</strong>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-6">
+        {% if menu.img %}
+          <img class="img-responsive" src="{{menu.img.url}}" alt="{{menu.img}}">
+        {% endif %}
+      </div>
+      <div class="col-6 text-start">
+        <p>{{menu.descr}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <!-- <div class="col-md-4">
+      <img src="/static/{{menu.img}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{menu.name}}</h5>
+        <p class="card-text">{{menu.price}}</p>
+      </div>
+    </div> -->

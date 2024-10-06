@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+   <title>contact</title>
+{% endblock %}
+
+{% block css %}
+   <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+{% endblock %}
+
+{% block content %}
+{% for contact in contacts %}
+   <div class="position-relative mb-2 contact-container" style="background-image: url({{contact.img.url}});">
+      <div class="d-flex gap-5 position-absolute top-50 start-50 translate-middle p-3 b-contact-icons">
+         <div class="b-contact-content text-center">
+            <a class="custom-a-hover" href="{{contact.adress}}" target="_blank">
+               <i class="bi bi-geo-alt"></i>
+               <p>Sirinkent mah 4215. sokak</p>
+            </a>
+            <a class="custom-a-hover" href="tel:{{contact.phone}}">
+               <i class="bi bi-telephone"></i>
+               <p>{{contact.phone}}</p>
+            </a>
+            <a class="custom-a-hover" href="mailto:{{contact.email}}">
+               <i class="bi bi-envelope"></i>
+               <p>{{contact.email}}</p>
+            </a>
+         </div>
+      </div>
+   </div>
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,8 @@
+footer{
+    background-color: var(--color-orange);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 1rem;
+    gap: 1rem;
+}

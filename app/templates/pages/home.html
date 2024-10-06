@@ -1,0 +1,20 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+   <title>Ana Sayfa</title>
+{% endblock %}
+
+{% block css %}
+   <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+   <link rel="stylesheet" href="{% static 'css/_kategorie.css' %}" />
+   <link rel="stylesheet" href="{% static 'css/_menu.css' %}" />
+{% endblock %}
+
+{% block content %}
+   <div class="accordion accordion-flush container-md text-center" id="accordionFlushExample">
+      {% for categorie in categories %}
+         {% include 'components/_kategorie.html' with categorie=categorie %}
+      {% endfor %}
+   </div>
+{% endblock content %}
