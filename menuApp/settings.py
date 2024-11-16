@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=pj8a*l06gupy^7dc^hz06bw#9jphdp=4=oqf7j1!a$m26ua17'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['.railway.app', 'localhost']
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['.railway.app', 'localhost']
 
 
 # Application definition
@@ -91,6 +92,13 @@ DATABASES = {
     }
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-46a6b.up.railway.app/admin',  # Buraya admin sayfanızın bulunduğu domaini ekleyin
+    'https://web-production-46a6b.up.railway.app',  # Railway domaini
+]
+
+CSRF_COOKIE_SECURE = True  # HTTPS üzerinden erişim için
+SESSION_COOKIE_SECURE = True  # HTTPS üzerinden oturum çerezleri için
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
